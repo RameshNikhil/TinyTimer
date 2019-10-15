@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'dart:io' show Platform;
-import 'package:flutter/foundation.dart'
+import 'package:flutter/foundation.dart';
+import 'package:intl/intl.dart'
 
 show debugDefaultTargetPlatformOverride;
 
