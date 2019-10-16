@@ -66,21 +66,24 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
         child: Container(
           alignment: Alignment.center,
-          child: Row(
+          child: 
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
-              Text("Tiny ", style: TextStyle(
-            fontSize: SizeConfig.blockSizeHorizontal * 10, 
+              Text("tiny", style: TextStyle(
+            fontSize: SizeConfig.blockSizeHorizontal * 15, 
             fontFamily: "Quicksand", 
             color: Color(0xff2e2e2e),
           ),),
           Text("Timer", style: TextStyle(
-            fontSize: SizeConfig.blockSizeHorizontal * 11, 
+            fontSize: SizeConfig.blockSizeHorizontal * 16, 
             fontFamily: "Quicksand", 
             fontWeight: FontWeight.bold,
             color: Color(0xff2e2e2e),
           ),),
             ],
-          )
+          ),
         )
     ));
   }

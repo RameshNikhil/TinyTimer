@@ -51,7 +51,7 @@ class _ClockState extends State<Clock> {
             children: <Widget>[
               Text(systemTime,
                   style: TextStyle(
-                      fontSize: SizeConfig.blockSizeHorizontal * 14,
+                      fontSize: SizeConfig.blockSizeHorizontal * 20,
                       fontFamily: "Quicksand",
                       fontWeight: FontWeight.bold,
                       color: Color(0xff67685a)
