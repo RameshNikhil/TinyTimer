@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart';
-import 'package:intl/intl.dart';
 import 'package:flutter/widgets.dart';
 import 'dart:async';
 import './SizeConfig.dart';
@@ -13,7 +11,7 @@ import 'Routes/FadeRoute.dart';
 void main(){
   debugShowCheckedModeBanner: false;
   debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
-  runApp(MyApp());
+  runApp(MyApp(),);
 } 
 
 class MyApp extends StatelessWidget {
@@ -21,6 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      showPerformanceOverlay: true,
       home: SplashScreen(),
     );
   }
