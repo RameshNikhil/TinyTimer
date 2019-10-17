@@ -45,7 +45,7 @@ class _ClockState extends State<Clock> {
         //     ],
         //   ),
         // ),
-        color: Colors.grey[300],
+        color: Colors.white,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

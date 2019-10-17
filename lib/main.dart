@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      showPerformanceOverlay: true,
+      showPerformanceOverlay: false,
       home: SplashScreen(),
     );
   }
@@ -52,17 +52,18 @@ class _SplashScreenState extends State<SplashScreen> {
     SizeConfig().init(context);
     return new Scaffold(
         body: new Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment(1.0, 1.0),
-          end: Alignment(-1.0, -1.0),
-          stops: [0.1, 0.9],
-          colors: [
-            Color(0xffd8d8d8),
-            Color(0xffd5e1ed),
-          ],
-        ),
-      ),
+      // decoration: BoxDecoration(
+      //   gradient: LinearGradient(
+      //     begin: Alignment(1.0, 1.0),
+      //     end: Alignment(-1.0, -1.0),
+      //     stops: [0.1, 0.9],
+      //     colors: [
+      //       Color(0xffd8d8d8),
+      //       Color(0xffd5e1ed),
+      //     ],
+      //   ),
+      // ),
+      color: Colors.white,
         child: Container(
           alignment: Alignment.center,
           child: 
@@ -73,13 +74,13 @@ class _SplashScreenState extends State<SplashScreen> {
               Text("tiny", style: TextStyle(
             fontSize: SizeConfig.blockSizeHorizontal * 15, 
             fontFamily: "Quicksand", 
-            color: Color(0xff2e2e2e),
+            color: Color(0xff67685a),
           ),),
           Text("Timer", style: TextStyle(
             fontSize: SizeConfig.blockSizeHorizontal * 16, 
             fontFamily: "Quicksand", 
             fontWeight: FontWeight.bold,
-            color: Color(0xff2e2e2e),
+            color: Color(0xff67685a),
           ),),
             ],
           ),
