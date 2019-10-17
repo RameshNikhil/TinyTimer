@@ -5,14 +5,15 @@ import 'dart:async';
 import '../SizeConfig.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-class Clock extends StatefulWidget {
+class TimerPage extends StatefulWidget {
   var pgController;
-  Clock({this.pgController});
+  TimerPage({this.pgController});
+
   @override
-  _ClockState createState() => _ClockState();
+  _TimerPageState createState() => _TimerPageState();
 }
 
-class _ClockState extends State<Clock> {
+class _TimerPageState extends State<TimerPage> {
   String systemTime;
   Timer _everySecond;
   String timeOfDay;
@@ -82,30 +83,38 @@ class _ClockState extends State<Clock> {
                   //         color: Color(0xff67685a))),
                 ],
               ),
-
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.center,
-              //   children: <Widget>[
-              //     Padding(
-              //       padding: EdgeInsets.only(right: 8.0),
-              //       child:  Icon(Icons.arrow_back,
-              //     size: SizeConfig.blockSizeHorizontal * 2,
-              //     color: Color(0xff67685a).withOpacity(0.6),),
-              //     ),
-
-              Padding(
-                padding: EdgeInsets.only(left: 8.0),
-                child: GestureDetector(
-                  onTap: () {
-                    widget.pgController.nextPage(
-                        duration: Duration(seconds: 1), curve: Curves.ease);
-                  },
-                  child: Icon(
-                    Icons.arrow_forward,
-                    size: SizeConfig.blockSizeHorizontal * 2,
-                    color: Color(0xff67685a).withOpacity(0.6),
-                  ),
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Padding(
+                      padding: EdgeInsets.only(right: 8.0),
+                      child: GestureDetector(
+                        child: Icon(
+                          Icons.arrow_back,
+                          size: SizeConfig.blockSizeHorizontal * 2,
+                          color: Color(0xff67685a).withOpacity(0.6),
+                        ),
+                        onTap: () {
+                          widget.pgController.previousPage(
+                              duration: Duration(seconds: 1),
+                              curve: Curves.ease);
+                        },
+                      )),
+                  Padding(
+                      padding: EdgeInsets.only(left: 8.0),
+                      child: GestureDetector(
+                        child: Icon(
+                          Icons.arrow_forward,
+                          size: SizeConfig.blockSizeHorizontal * 2,
+                          color: Color(0xff67685a).withOpacity(0.6),
+                        ),
+                        onTap: () {
+                          widget.pgController.nextPage(
+                              duration: Duration(seconds: 1),
+                              curve: Curves.ease);
+                        },
+                      )),
+                ],
               ),
             ],
           ),
