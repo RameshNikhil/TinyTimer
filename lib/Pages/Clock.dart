@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/widgets.dart';
 import 'dart:async';
-import 'package:ArloTimer/SizeConfig.dart';
+import '../SizeConfig.dart';
 
 class Clock extends StatefulWidget {
   @override

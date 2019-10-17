@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ArloTimer/SizeConfig.dart';
 import 'package:flutter/widgets.dart';
 import 'dart:async';
-import 'package:ArloTimer/SizeConfig.dart';
+import '../SizeConfig.dart';
 
 class StopWatch extends StatefulWidget {
   _StopwatchState createState() => _StopwatchState();

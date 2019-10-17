@@ -1,4 +1,4 @@
-import 'package:ArloTimer/Pages/Clock.dart';
+import './Clock.dart';
 import 'package:flutter/material.dart';
 import 'Stopwatch.dart';
 
