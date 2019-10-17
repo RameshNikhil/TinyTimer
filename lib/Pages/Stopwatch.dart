@@ -1,3 +1,4 @@
+import 'package:TinyTimer/BaseText.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'dart:async';
@@ -31,12 +32,13 @@ class _StopwatchState extends State<StopWatch> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text(_time,
-                    style: TextStyle(
-                        fontSize: SizeConfig.blockSizeHorizontal * 20,
-                        fontFamily: "Quicksand",
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xff67685a))),
+
+                BaseText(text: _time, size: 20,), 
+                Padding(
+                    padding: EdgeInsets.only(bottom: 8.0,),
+                    child:  BaseText(text: "stopwatch", size: 2,),
+                  ),
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[

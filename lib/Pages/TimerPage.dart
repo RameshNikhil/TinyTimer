@@ -1,3 +1,4 @@
+import 'package:TinyTimer/BaseText.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/widgets.dart';
@@ -34,12 +35,7 @@ class _TimerPageState extends State<TimerPage> {
       });
     });
 
-    // // time of day
-    // _everyHour = Timer.periodic(Duration(hours: 1), (Timer t) {
-    //   setState(() {
-    //     timeOfDay = DateFormat('a').format(DateTime.now());
-    //   });
-    // });
+
   }
 
   @override
@@ -48,39 +44,25 @@ class _TimerPageState extends State<TimerPage> {
 
     return Material(
       child: Container(
-        // decoration: BoxDecoration(
-        //   gradient: LinearGradient(
-        //     begin: Alignment(1.0, 1.0),
-        //     end: Alignment(-1.0, -1.0),
-        //     stops: [0.1, 0.9],
-        //     colors: [
-        //       Color(0xffd8d8d8),
-        //       Color(0xffd5e1ed),
-        //     ],
-        //   ),
-        // ),
+        
         color: Colors.white,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Row(
+              Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text(systemTime,
-                      style: TextStyle(
-                          fontSize: SizeConfig.blockSizeHorizontal * 16,
-                          fontFamily: "Quicksand",
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xff67685a))),
 
-                  // Text(" " + timeOfDay,
-                  //     style: TextStyle(
-                  //         fontSize: SizeConfig.blockSizeHorizontal * 8,
-                  //         fontFamily: "Quicksand",
-                  //         fontWeight: FontWeight.bold,
-                  //         color: Color(0xff67685a))),
+                  BaseText(text: systemTime, size: 16.0,),
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 8.0,),
+                    child:  BaseText(text: "timer", size: 2,),
+                  ),
+                 
+                  
+
                 ],
               ),
               Row(

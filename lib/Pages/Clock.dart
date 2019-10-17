@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'dart:async';
 import '../SizeConfig.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:TinyTimer/BaseText.dart';
 
 class Clock extends StatefulWidget {
   var pgController;
@@ -47,51 +48,27 @@ class _ClockState extends State<Clock> {
 
     return Material(
       child: Container(
-        // decoration: BoxDecoration(
-        //   gradient: LinearGradient(
-        //     begin: Alignment(1.0, 1.0),
-        //     end: Alignment(-1.0, -1.0),
-        //     stops: [0.1, 0.9],
-        //     colors: [
-        //       Color(0xffd8d8d8),
-        //       Color(0xffd5e1ed),
-        //     ],
-        //   ),
-        // ),
+        
         color: Colors.white,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Row(
+              Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text(systemTime,
-                      style: TextStyle(
-                          fontSize: SizeConfig.blockSizeHorizontal * 16,
-                          fontFamily: "Quicksand",
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xff67685a))),
 
-                  // Text(" " + timeOfDay,
-                  //     style: TextStyle(
-                  //         fontSize: SizeConfig.blockSizeHorizontal * 8,
-                  //         fontFamily: "Quicksand",
-                  //         fontWeight: FontWeight.bold,
-                  //         color: Color(0xff67685a))),
+                  BaseText(text: systemTime, size: 16.0),
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 8.0,),
+                    child:  BaseText(text: "clock", size: 2,),
+                  ),
+                  
+
                 ],
               ),
 
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.center,
-              //   children: <Widget>[
-              //     Padding(
-              //       padding: EdgeInsets.only(right: 8.0),
-              //       child:  Icon(Icons.arrow_back,
-              //     size: SizeConfig.blockSizeHorizontal * 2,
-              //     color: Color(0xff67685a).withOpacity(0.6),),
-              //     ),
 
               Padding(
                 padding: EdgeInsets.only(left: 8.0),
