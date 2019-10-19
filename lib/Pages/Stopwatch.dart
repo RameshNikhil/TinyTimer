@@ -34,10 +34,11 @@ class _StopwatchState extends State<StopWatch> {
               children: <Widget>[
 
                 BaseText(text: _time, size: 20,), 
-                Padding(
-                    padding: EdgeInsets.only(bottom: 8.0,),
-                    child:  BaseText(text: "stopwatch", size: 2,),
-                  ),
+
+                // Padding(
+                //     padding: EdgeInsets.only(bottom: 8.0,),
+                //     child:  BaseText(text: "stopwatch", size: 2,),
+                //   ),
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

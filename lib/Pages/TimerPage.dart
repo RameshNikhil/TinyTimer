@@ -5,6 +5,8 @@ import 'package:flutter/widgets.dart';
 import 'dart:async';
 import '../SizeConfig.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:quiver/async.dart';
+import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 
 class TimerPage extends StatefulWidget {
   var pgController;
@@ -34,17 +36,17 @@ class _TimerPageState extends State<TimerPage> {
         systemTime = DateFormat('hh:mm:ss a').format(DateTime.now());
       });
     });
-
-
   }
+  
+  final format = DateFormat("HH:mm");
 
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
+    
 
     return Material(
       child: Container(
-        
         color: Colors.white,
         child: Center(
           child: Column(
@@ -55,19 +57,41 @@ class _TimerPageState extends State<TimerPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
 
-                  BaseText(text: systemTime, size: 16.0,),
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 8.0,),
-                    child:  BaseText(text: "timer", size: 2,),
-                  ),
-                 
-                  
 
+
+                  BaseText(
+                    text: systemTime,
+                    size: 16.0,
+                  ),
+
+
+                     DateTimeField(
+        format: format,
+        onShowPicker: (context, currentValue) async {
+          final time = await showTimePicker(
+            context: context,
+            initialTime: TimeOfDay.fromDateTime(currentValue ?? DateTime.now()),
+          );
+          return DateTimeField.convert(time);
+        },
+      ),
+
+
+                  Padding(
+                    padding: EdgeInsets.only(
+                      bottom: 8.0,
+                    ),
+                    child: BaseText(
+                      text: "timer",
+                      size: 2,
+                    ),
+                  ),
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+
                   Padding(
                       padding: EdgeInsets.only(right: 8.0),
                       child: GestureDetector(
@@ -105,3 +129,48 @@ class _TimerPageState extends State<TimerPage> {
     );
   }
 }
+
+
+
+
+// /* Countdown Timer */
+
+// int _start = 10;
+// int _current = 10;
+
+// void startTimer() {
+//   CountdownTimer countDownTimer = new CountdownTimer(
+//     new Duration(seconds: _start),
+//     new Duration(seconds: 1),
+//   );
+
+//   var sub = countDownTimer.listen(null);
+//   sub.onData((duration) {
+//     // setState(() { _current = _start - duration.elapsed.inSeconds; });
+//   });
+
+//   sub.onDone(() {
+//     print("Done");
+//     sub.cancel();
+//   });
+// }
+
+// Widget build(BuildContext context) {
+//   return new Scaffold(
+//     appBar: AppBar(title: Text("Timer test")),
+//     body: Column(
+//       children: <Widget>[
+//         RaisedButton(
+//           onPressed: () {
+//             startTimer();
+//           },
+//           child: Text("start"),
+//         ),
+//         Text("$_current")
+//       ],
+//     ),
+//   );
+// }
+
+
+

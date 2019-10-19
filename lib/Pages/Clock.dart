@@ -60,10 +60,11 @@ class _ClockState extends State<Clock> {
                 children: <Widget>[
 
                   BaseText(text: systemTime, size: 16.0),
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 8.0,),
-                    child:  BaseText(text: "clock", size: 2,),
-                  ),
+
+                  // Padding(
+                  //   padding: EdgeInsets.only(bottom: 8.0,),
+                  //   child:  BaseText(text: "clock", size: 2,),
+                  // ),
                   
 
                 ],
