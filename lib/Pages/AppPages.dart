@@ -24,7 +24,7 @@ class AppPages extends StatelessWidget {
           //Double tap to restart / stop - turns white?
 
           //Timer
-          TimerPage(pgController: _controller),
+          //TimerPage(pgController: _controller),
 
           //Instructions and settings
           InfoPage(

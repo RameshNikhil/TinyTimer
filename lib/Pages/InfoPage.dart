@@ -53,7 +53,7 @@ class _InfoPageState extends State<InfoPage> {
                     padding: EdgeInsets.only(bottom: 16.0),
                     child: BaseText(
                       text:
-                          "3. Timer : Select time then double click to start. Long press to stop and reset.",
+                          "3. Timer : Issues with seleting time - will fix soon .",
                       size: 2,
                     ),
                   ),
@@ -62,14 +62,18 @@ class _InfoPageState extends State<InfoPage> {
               Padding(
                 padding: EdgeInsets.only(bottom: 16.0),
                 child: BaseText(
-                  text: "Check me out on my github: RameshNikhil",
+                  text:
+                      "Check me out on my github: https://github.com/RameshNikhil",
                   size: 2,
                 ),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Padding(
+                  Column(
+                    children: <Widget>[
+
+                      Padding(
                       padding: EdgeInsets.only(right: 8.0),
                       child: GestureDetector(
                         child: Icon(
@@ -83,6 +87,18 @@ class _InfoPageState extends State<InfoPage> {
                               curve: Curves.ease);
                         },
                       )),
+                  Padding(
+                    padding: EdgeInsets.only(top: 16.0),
+                    child: BaseText(
+                      text: "Buildtime = 2 hours",
+                      size: 1,
+                    ),
+                  ),
+
+
+                    ],
+                  ),
+                  
                 ],
               ),
             ],

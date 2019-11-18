@@ -65,27 +65,27 @@ class _TimerPageState extends State<TimerPage> {
                   ),
 
 
-                     DateTimeField(
-        format: format,
-        onShowPicker: (context, currentValue) async {
-          final time = await showTimePicker(
-            context: context,
-            initialTime: TimeOfDay.fromDateTime(currentValue ?? DateTime.now()),
-          );
-          return DateTimeField.convert(time);
-        },
-      ),
+      //                DateTimeField(
+      //   format: format,
+      //   onShowPicker: (context, currentValue) async {
+      //     final time = await showTimePicker(
+      //       context: context,
+      //       initialTime: TimeOfDay.fromDateTime(currentValue ?? DateTime.now()),
+      //     );
+      //     return DateTimeField.convert(time);
+      //   },
+      // ),
 
 
-                  Padding(
-                    padding: EdgeInsets.only(
-                      bottom: 8.0,
-                    ),
-                    child: BaseText(
-                      text: "timer",
-                      size: 2,
-                    ),
-                  ),
+                  // Padding(
+                  //   padding: EdgeInsets.only(
+                  //     bottom: 8.0,
+                  //   ),
+                  //   child: BaseText(
+                  //     text: "timer",
+                  //     size: 2,
+                  //   ),
+                  // ),
                 ],
               ),
               Row(
