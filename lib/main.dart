@@ -44,6 +44,8 @@ class _SplashScreenState extends State<SplashScreen> {
     Navigator.pushReplacement(context, FadeRouteBuilder(page: AppPages()));
   }
 
+  // When this object is loaded into the tree, call startTime() which will start a timer for 2 seconds and execute the build function 
+  // After the 2 seconds, call navigationPage() which will take you to the main page 
   @override
   void initState() {
     super.initState();
