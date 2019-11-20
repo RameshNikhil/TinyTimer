@@ -17,34 +17,31 @@ class TimerPage extends StatefulWidget {
 }
 
 class _TimerPageState extends State<TimerPage> {
-  String systemTime;
+  String systemTime = "00:00:00";
   Timer _everySecond;
-  String timeOfDay;
   Timer _everyHour;
+  var timeInput;
 
-  @override
-  void initState() {
-    super.initState();
+  final timeInputController = TextEditingController(); 
 
-    // sets first value
-    systemTime = DateFormat('hh:mm:ss a').format(DateTime.now());
-    timeOfDay = DateFormat('a').format(DateTime.now());
+  // @override
+  // void initState() {
+  //   super.initState();
 
-    // defines a timer
-    _everySecond = Timer.periodic(Duration(seconds: 1), (Timer t) {
-      setState(() {
-        systemTime = DateFormat('hh:mm:ss a').format(DateTime.now());
-      });
-    });
-  }
+  //   // defines a timer
+  //   _everySecond = Timer.periodic(Duration(seconds: 1), (Timer t) {
+  //     setState(() {
+  //       systemTime = DateFormat('hh:mm:ss a').format(DateTime.now());
+  //     });
+  //   });
+  // }
   
-  final format = DateFormat("HH:mm");
+  final format = DateFormat("HH:mm:ss");
 
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     
-
     return Material(
       child: Container(
         color: Colors.white,
@@ -64,28 +61,27 @@ class _TimerPageState extends State<TimerPage> {
                     size: 16.0,
                   ),
 
+                  Padding(
+                    padding: EdgeInsets.only(top: 8.0),
+                    child: Column(
+                      children: <Widget>[
+                        TextField(
+                          controller: timeInputController,
+                          decoration: InputDecoration(
+                            labelText: "Enter time"
+                          ),
+                        ),
+                        RaisedButton(
+                          onPressed: (){
+                            var tempTime = Text(timeInputController.text); 
+                            
+                          },
+                        )
+                      ],
+                    ),
+                  ),
 
-      //                DateTimeField(
-      //   format: format,
-      //   onShowPicker: (context, currentValue) async {
-      //     final time = await showTimePicker(
-      //       context: context,
-      //       initialTime: TimeOfDay.fromDateTime(currentValue ?? DateTime.now()),
-      //     );
-      //     return DateTimeField.convert(time);
-      //   },
-      // ),
 
-
-                  // Padding(
-                  //   padding: EdgeInsets.only(
-                  //     bottom: 8.0,
-                  //   ),
-                  //   child: BaseText(
-                  //     text: "timer",
-                  //     size: 2,
-                  //   ),
-                  // ),
                 ],
               ),
               Row(

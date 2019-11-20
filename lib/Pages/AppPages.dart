@@ -1,5 +1,4 @@
 import 'package:TinyTimer/Pages/InfoPage.dart';
-
 import './Clock.dart';
 import 'package:flutter/material.dart';
 import 'Stopwatch.dart';
@@ -24,7 +23,7 @@ class AppPages extends StatelessWidget {
           //Double tap to restart / stop - turns white?
 
           //Timer
-          //TimerPage(pgController: _controller),
+          TimerPage(pgController: _controller),
 
           //Instructions and settings
           InfoPage(
