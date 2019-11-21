@@ -3,7 +3,6 @@ import 'package:intl/intl.dart';
 import 'package:flutter/widgets.dart';
 import 'dart:async';
 import '../SizeConfig.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:TinyTimer/BaseText.dart';
 
 class Clock extends StatefulWidget {
@@ -33,13 +32,6 @@ class _ClockState extends State<Clock> {
         systemTime = DateFormat('hh:mm:ss a').format(DateTime.now());
       });
     });
-
-    // // time of day
-    // _everyHour = Timer.periodic(Duration(hours: 1), (Timer t) {
-    //   setState(() {
-    //     timeOfDay = DateFormat('a').format(DateTime.now());
-    //   });
-    // });
   }
 
   @override
@@ -48,7 +40,6 @@ class _ClockState extends State<Clock> {
 
     return Material(
       child: Container(
-        
         color: Colors.white,
         child: Center(
           child: Column(
@@ -58,19 +49,9 @@ class _ClockState extends State<Clock> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-
                   BaseText(text: systemTime, size: 16.0),
-
-                  // Padding(
-                  //   padding: EdgeInsets.only(bottom: 8.0,),
-                  //   child:  BaseText(text: "clock", size: 2,),
-                  // ),
-                  
-
                 ],
               ),
-
-
               Padding(
                 padding: EdgeInsets.only(left: 8.0),
                 child: GestureDetector(

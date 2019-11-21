@@ -13,22 +13,27 @@ class AppPages extends StatelessWidget {
         controller: _controller,
         scrollDirection: Axis.horizontal,
         children: <Widget>[
+
           //Clock
           Clock(pgController: _controller),
 
           //Stopwatch
+            //Tap once to start - turns green
+            //Tap again to pause - turns red
+            //Double tap to restart / stop - turns white
           StopWatch(pgController: _controller),
-          //Tap once to start - turns green
-          //Tap again to pause - turns red
-          //Double tap to restart / stop - turns white?
+          
 
           //Timer
-          TimerPage(pgController: _controller),
+            //TODO : Fix this
+            //! This page is commented out until fixed
+          //TimerPage(pgController: _controller),
 
           //Instructions and settings
           InfoPage(
             pgController: _controller,
           )
+
         ]);
   }
 }

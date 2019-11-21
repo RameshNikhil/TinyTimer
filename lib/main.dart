@@ -57,17 +57,6 @@ class _SplashScreenState extends State<SplashScreen> {
     SizeConfig().init(context);
     return new Scaffold(
         body: new Container(
-            // decoration: BoxDecoration(
-            //   gradient: LinearGradient(
-            //     begin: Alignment(1.0, 1.0),
-            //     end: Alignment(-1.0, -1.0),
-            //     stops: [0.1, 0.9],
-            //     colors: [
-            //       Color(0xffd8d8d8),
-            //       Color(0xffd5e1ed),
-            //     ],
-            //   ),
-            // ),
             color: Colors.white,
             child: Container(
               alignment: Alignment.center,

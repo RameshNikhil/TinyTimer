@@ -33,7 +33,7 @@ class _InfoPageState extends State<InfoPage> {
               Padding(
                 padding: EdgeInsets.only(bottom: 16.0),
                 child: BaseText(
-                  text: "by Nikhil Ramesh",
+                  text: "by https://github.com/RameshNikhil",
                   size: 4,
                 ),
               ),
@@ -41,64 +41,45 @@ class _InfoPageState extends State<InfoPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   BaseText(
-                    text: "1. Clock : This is the current system time.",
+                    text: "1) Clock: This is the current system time.",
                     size: 2,
                   ),
                   BaseText(
                     text:
-                        "2. Stopwatch : Tap once to start. Tap again to pause. Double tap to reset. ",
+                        "2) Stopwatch  Tap once to start. Tap again to pause. Double tap to reset. ",
                     size: 2,
                   ),
                   Padding(
                     padding: EdgeInsets.only(bottom: 16.0),
                     child: BaseText(
                       text:
-                          "3. Timer : Issues with seleting time - will fix soon .",
+                          "3) Timer: Issues with seleting time - will fix soon .",
                       size: 2,
                     ),
                   ),
                 ],
-              ),
-              Padding(
-                padding: EdgeInsets.only(bottom: 16.0),
-                child: BaseText(
-                  text:
-                      "Check me out on my github: https://github.com/RameshNikhil",
-                  size: 2,
-                ),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Column(
                     children: <Widget>[
-
                       Padding(
-                      padding: EdgeInsets.only(right: 8.0),
-                      child: GestureDetector(
-                        child: Icon(
-                          Icons.arrow_back,
-                          size: SizeConfig.blockSizeHorizontal * 2,
-                          color: Color(0xff67685a).withOpacity(0.6),
-                        ),
-                        onTap: () {
-                          widget.pgController.previousPage(
-                              duration: Duration(seconds: 1),
-                              curve: Curves.ease);
-                        },
-                      )),
-                  Padding(
-                    padding: EdgeInsets.only(top: 16.0),
-                    child: BaseText(
-                      text: "Buildtime = 2 hours",
-                      size: 1,
-                    ),
-                  ),
-
-
+                          padding: EdgeInsets.only(right: 8.0),
+                          child: GestureDetector(
+                            child: Icon(
+                              Icons.arrow_back,
+                              size: SizeConfig.blockSizeHorizontal * 2,
+                              color: Color(0xff67685a).withOpacity(0.6),
+                            ),
+                            onTap: () {
+                              widget.pgController.previousPage(
+                                  duration: Duration(seconds: 1),
+                                  curve: Curves.ease);
+                            },
+                          )),
                     ],
                   ),
-                  
                 ],
               ),
             ],

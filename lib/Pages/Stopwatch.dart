@@ -32,14 +32,10 @@ class _StopwatchState extends State<StopWatch> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-
-                BaseText(text: _time, size: 20,), 
-
-                // Padding(
-                //     padding: EdgeInsets.only(bottom: 8.0,),
-                //     child:  BaseText(text: "stopwatch", size: 2,),
-                //   ),
-
+                BaseText(
+                  text: _time,
+                  size: 20,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -110,14 +106,6 @@ class _StopwatchState extends State<StopWatch> {
           }
         },
         onDoubleTap: () {
-          // _stopwatch.stop();
-          // String elapsedString = _stopwatch.elapsed.toString().substring(0,7);
-
-          // setState(() {
-          //   _color = Color(0xfff05026);
-          //   _time = elapsedString;
-          // });
-
           _clickIn = false;
           _stopwatch.reset();
           setState(() {
@@ -125,13 +113,6 @@ class _StopwatchState extends State<StopWatch> {
             _time = "0:00:00";
           });
         },
-        // onLongPress: (){
-        //   _stopwatch.reset();
-        //   setState(() {
-        //     _color = Colors.white;
-        //     _time = "0:00:00";
-        //   });
-        // },
       ),
     );
   }

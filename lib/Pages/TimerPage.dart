@@ -22,7 +22,7 @@ class _TimerPageState extends State<TimerPage> {
   Timer _everyHour;
   var timeInput;
 
-  final timeInputController = TextEditingController(); 
+  final timeInputController = TextEditingController();
 
   // @override
   // void initState() {
@@ -35,13 +35,13 @@ class _TimerPageState extends State<TimerPage> {
   //     });
   //   });
   // }
-  
+
   final format = DateFormat("HH:mm:ss");
 
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    
+
     return Material(
       child: Container(
         color: Colors.white,
@@ -53,41 +53,31 @@ class _TimerPageState extends State<TimerPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-
-
-
                   BaseText(
                     text: systemTime,
                     size: 16.0,
                   ),
-
                   Padding(
                     padding: EdgeInsets.only(top: 8.0),
                     child: Column(
                       children: <Widget>[
                         TextField(
                           controller: timeInputController,
-                          decoration: InputDecoration(
-                            labelText: "Enter time"
-                          ),
+                          decoration: InputDecoration(labelText: "Enter time"),
                         ),
                         RaisedButton(
-                          onPressed: (){
-                            var tempTime = Text(timeInputController.text); 
-                            
+                          onPressed: () {
+                            var tempTime = Text(timeInputController.text);
                           },
                         )
                       ],
                     ),
                   ),
-
-
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-
                   Padding(
                       padding: EdgeInsets.only(right: 8.0),
                       child: GestureDetector(
@@ -125,9 +115,6 @@ class _TimerPageState extends State<TimerPage> {
     );
   }
 }
-
-
-
 
 // /* Countdown Timer */
 
@@ -167,6 +154,3 @@ class _TimerPageState extends State<TimerPage> {
 //     ),
 //   );
 // }
-
-
-
