@@ -1,10 +1,10 @@
 # TinyTimer_MacApp
 
-### What? 
+### What is it? 
 MacOS doesn't have a native clock app with a stopwatch and timer so I build one. 
 
-### Stack 
-Everything runs locally, built with flutter 
+### Stack?
+Flutter for the build, hosted with the Surge CDN
 
 ### Build time 
 Striated but somewhere around 4 hours, shamefully a lot of which was time spent deciding on a pleasing colour pallet and font
@@ -17,3 +17,5 @@ The timer. Clone it, have a crack at fixing it and prettying it up then hmu with
 **http://loose-baloon.surge.sh/#/**
 
 -- hosted with Surge ^^
+
+*NOTE: I noticed that the webapp doesn't work all the time -- TODO*
