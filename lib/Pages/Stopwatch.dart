@@ -105,7 +105,7 @@ class _StopwatchState extends State<StopWatch> {
             });
           }
         },
-        onDoubleTap: () {
+        onLongPress: () {
           _clickIn = false;
           _stopwatch.reset();
           setState(() {

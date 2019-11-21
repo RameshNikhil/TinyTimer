@@ -9,8 +9,6 @@ import 'Routes/FadeRoute.dart';
 // show debugDefaultTargetPlatformOverride;
 
 void main() {
-  debugShowCheckedModeBanner:
-  false;
   debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
   runApp(
     MyApp(),
