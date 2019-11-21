@@ -42,25 +42,68 @@ class _InfoPageState extends State<InfoPage> {
                 children: <Widget>[
                   Padding(
                       padding: EdgeInsets.only(top: 10.0),
-                      child: BaseText(
-                        text: "1) Clock: This is the current system time.",
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+
+                           BaseText(
+                        text: " Clock | ",
                         size: 1.5,
-                      )),
+                      ),
+
+                       BaseText(
+                        text: "This is the current system time.",
+                        size: 1,
+                      )
+
+                        ],
+                      )
+                      
+                      ),
                   Padding(
                     padding: EdgeInsets.only(top: 10.0),
-                    child: BaseText(
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        BaseText(
                       text:
-                          "2) Stopwatch  Tap once to start. Tap again to pause. Long press to reset. ",
+                          "                       Stopwatch | ",
                       size: 1.5,
                     ),
+                    BaseText(
+                      text:
+                          "Tap once to start. Tap again to pause. Long press to reset.",
+                      size: 1,
+                    ),
+                      ],
+                    )
+                    
+                    
                   ),
                   Padding(
                     padding: EdgeInsets.only(top: 10.0, bottom: 20),
-                      child: BaseText(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+
+                          BaseText(
                         text:
-                            "3) Timer: Issues with seleting time - will fix soon.",
+                            "         Timer | ",
                         size: 1.5,
                       ),
+                      BaseText(
+                        text:
+                            "Issues with seleting time - will fix soon.",
+                        size: 1,
+                      ),
+
+                        ],
+                      )
+                      
+                      
                   ),
                 ],
               ),
