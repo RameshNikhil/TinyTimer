@@ -28,34 +28,39 @@ class _InfoPageState extends State<InfoPage> {
             children: <Widget>[
               BaseText(
                 text: "tinyTimer",
-                size: 10,
+                size: 6,
               ),
               Padding(
-                padding: EdgeInsets.only(bottom: 16.0),
+                padding: EdgeInsets.only(bottom: 16.0, top: 16.0),
                 child: BaseText(
-                  text: "by https://github.com/RameshNikhil",
-                  size: 4,
+                  text: "https://github.com/RameshNikhil",
+                  size: 3,
                 ),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  BaseText(
-                    text: "1) Clock: This is the current system time.",
-                    size: 2,
-                  ),
-                  BaseText(
-                    text:
-                        "2) Stopwatch  Tap once to start. Tap again to pause. Double tap to reset. ",
-                    size: 2,
-                  ),
                   Padding(
-                    padding: EdgeInsets.only(bottom: 16.0),
+                      padding: EdgeInsets.only(top: 10.0),
+                      child: BaseText(
+                        text: "1) Clock: This is the current system time.",
+                        size: 2,
+                      )),
+                  Padding(
+                    padding: EdgeInsets.only(top: 10.0),
                     child: BaseText(
                       text:
-                          "3) Timer: Issues with seleting time - will fix soon .",
+                          "2) Stopwatch  Tap once to start. Tap again to pause. Double tap to reset. ",
                       size: 2,
                     ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 10.0, bottom: 20),
+                      child: BaseText(
+                        text:
+                            "3) Timer: Issues with seleting time - will fix soon .",
+                        size: 2,
+                      ),
                   ),
                 ],
               ),
@@ -69,7 +74,7 @@ class _InfoPageState extends State<InfoPage> {
                           child: GestureDetector(
                             child: Icon(
                               Icons.arrow_back,
-                              size: SizeConfig.blockSizeHorizontal * 2,
+                              size: SizeConfig.blockSizeHorizontal * 1,
                               color: Color(0xff67685a).withOpacity(0.6),
                             ),
                             onTap: () {

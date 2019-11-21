@@ -44,7 +44,7 @@ class _StopwatchState extends State<StopWatch> {
                         child: GestureDetector(
                           child: Icon(
                             Icons.arrow_back,
-                            size: SizeConfig.blockSizeHorizontal * 2,
+                            size: SizeConfig.blockSizeHorizontal * 1,
                             color: Color(0xff67685a).withOpacity(0.6),
                           ),
                           onTap: () {
@@ -58,7 +58,7 @@ class _StopwatchState extends State<StopWatch> {
                         child: GestureDetector(
                           child: Icon(
                             Icons.arrow_forward,
-                            size: SizeConfig.blockSizeHorizontal * 2,
+                            size: SizeConfig.blockSizeHorizontal * 1,
                             color: Color(0xff67685a).withOpacity(0.6),
                           ),
                           onTap: () {
