@@ -31,7 +31,7 @@ class _InfoPageState extends State<InfoPage> {
                 size: 6,
               ),
               Padding(
-                padding: EdgeInsets.only(bottom: 16.0, top: 16.0),
+                padding: EdgeInsets.only(bottom: 16.0, top: 20.0),
                 child: BaseText(
                   text: "https://github.com/RameshNikhil",
                   size: 3,
@@ -44,22 +44,22 @@ class _InfoPageState extends State<InfoPage> {
                       padding: EdgeInsets.only(top: 10.0),
                       child: BaseText(
                         text: "1) Clock: This is the current system time.",
-                        size: 2,
+                        size: 1.5,
                       )),
                   Padding(
                     padding: EdgeInsets.only(top: 10.0),
                     child: BaseText(
                       text:
-                          "2) Stopwatch  Tap once to start. Tap again to pause. Double tap to reset. ",
-                      size: 2,
+                          "2) Stopwatch  Tap once to start. Tap again to pause. Long press to reset. ",
+                      size: 1.5,
                     ),
                   ),
                   Padding(
                     padding: EdgeInsets.only(top: 10.0, bottom: 20),
                       child: BaseText(
                         text:
-                            "3) Timer: Issues with seleting time - will fix soon .",
-                        size: 2,
+                            "3) Timer: Issues with seleting time - will fix soon.",
+                        size: 1.5,
                       ),
                   ),
                 ],
