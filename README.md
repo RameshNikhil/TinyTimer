@@ -23,6 +23,3 @@ _> To fix, navigate the the last page by clicking and dragging, or clicking the 
   or
 
 **https://tinytimer-5b86b.firebaseapp.com**
-
-
-# Clone TinyTimer_MobileApp to access an iOS optimised version
